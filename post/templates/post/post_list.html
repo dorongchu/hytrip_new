@@ -1,0 +1,55 @@
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+<link rel="stylesheet" href="static/css/bootstrap.css">
+<!-- 게시판 테이블 생성(겉에 구조 잡아주는 역할) -->
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>설명</th>
+            <th>사진</th>
+            <th>등록 일시</th>
+            <th>태그 집합</th>
+            <th>조회수</th>
+            <th>수정</th>
+            <th>삭제</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- 게시판 테이블 생성(안에 들어가는 내용물) -->
+        {% if post_list %}
+            {% for post in post_list %}
+        <tr>
+                <td> {{ post.id }} </td>
+                <td>
+                <a href="/post/{{ post.pk }}"></a>
+                <a href="{{ post.get_absolute_url }}">{{ post.name }}</a>
+                </td>
+                <td> {{ post.desc }} </td>
+                <td> {{ post.photo }} </td>
+                <td> {{ post.created_at }} </td>
+                <td> {{ post.tagged }} </td>
+                <td> {{ post.update_counter }} </td>
+                <td>
+                    <a href="{% url 'post:post_edit' post.pk %}">수정</a>
+                </td>
+                <td>
+                    <a href="{% url 'post:post_remove' post.pk %}">삭제</a>
+                </td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <p>There are no posts in the board</p>
+        {% endif %}
+        </tbody>
+        </table>
+        <!-- 글쓰기 페이지로 넘어가는 링크 -->
+        <a  href="{% url 'post:post_new' %}" class="btn btn-default pull-right"> 글쓰기</a>
+
+    </div>
+{% endblock content%}
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/bootstrap.js"></script>

@@ -1,0 +1,256 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{# 장고에서 css, img를 사용하기 위해 사용하는 코드. prj/settings.py에서 별도의 코드 수정이 필요 #}
+
+{% block title %}
+    hytrip
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <link rel= "stylesheet" type="text/css" href="static/main/css/main_section.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<!-- jsp에서 작성한 section -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="static/main/img/pic112.jpg" width="1100" height="500">
+             <div class="carousel-caption">
+                <h1>Enjoy your trip</h1>
+                 <p>with HYtrip</p>
+                 <button><i class="fa fa-map btn_map"></i>플래너 시작하기</button>
+           </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/main/img/pic42.jpg" width="1100" height="500">
+             <div class="carousel-caption">
+                <h1>Enjoy your trip</h1>
+                 <p>We have such a good plan</p>
+                 <button><i class="fa fa-map btn_map"></i>플래너 시작하기</button>
+           </div>
+        </div>
+        <div class="carousel-item">
+          <img src="static/main/img/pic22.jpg" width="1100" height="500">
+             <div class="carousel-caption">
+                <h1>Enjoy your trip</h1>
+                 <p>please looking around our web site</p>
+                 <button><i class="fa fa-map btn_map"></i>플래너 시작하기</button>
+           </div>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+    <div class="wrap">
+    <div class="page_title"> 최윤희님만을 위한 여행지 추천 </div>
+    <div class="page_desc"> 취향에 맞는 여행지를 골라보세요! </div>
+    <div class="story_list">
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/jeju.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">푸른 제주 바다</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/namu.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">건강이 좋아지는 대나무숲 길</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/han.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">한강 따라 서울구경</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/para.png" alt="" class="story_img">
+          </div>
+          <div class="story_title">짜릿한 추억 패러글라이딩</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+    </div>
+    </div>
+    <!-- //카드 -->
+
+     <!-- 카드 -->
+    <div class="wrap">
+    <div class="page_title">
+                어디로 갈까?         </div>
+    <div class="page_desc">
+                팁에서 아이디어를 얻어보세요.         </div>
+    <div class="story_list">
+       <a href="#" class="story_box big">
+          <div class="story_imgbox">
+          <img src="static/main/img/han.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">한강 따라 서울구경</div>
+          <div class="story_desc">오랜 세월의 역사와 사연을 품은 센느강의 다리들. 세계문화유산으로 지정된 다리만 10개! 아름다운 다리들과 센느강을 따라 걷기만 해도 파리의 절반은 볼 수 ...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/namu.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">건강이 좋아지는 대나무숲 길</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/jeju.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">푸른 제주 바다</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/para.png" alt="" class="story_img">
+          </div>
+          <div class="story_title">짜릿한 추억 패러글라이딩</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box">
+          <div class="story_imgbox">
+          <img src="static/main/img/ever.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">스릴 넘치는 에버랜드</div>
+          <div class="story_desc">빡빡한 스케줄의 피곤한 여행은 가라. 새파란 바다와 하늘을 보며 놀고 먹...</div>
+       </a>
+
+       <a href="#" class="story_box big">
+          <div class="story_imgbox">
+          <img src="static/main/img/hanok.jpg" alt="" class="story_img">
+          </div>
+          <div class="story_title">한국의 멋 한옥마을</div>
+          <div class="story_desc">오랜 세월의 역사와 사연을 품은 센느강의 다리들. 세계문화유산으로 지정된 다리만 10개! 아름다운 다리들과 센느강을 따라 걷기만 해도 파리의 절반은 볼 수 ...</div>
+       </a>
+    </div>
+    </div>
+    <!-- //카드 -->
+
+     <div class="wrap">
+
+     <div class="page_title"> 인기 여행지 </div>
+     <div class="page_desc">
+               지금 이 순간 ! 인기있는 여행지      </div>
+
+      <div class="top_city_list">
+
+      <div class="top_city w2">
+      <div class="top_city_title"> 광화문 </div>
+        <img src="static/main/img/pic1.jpg" >
+      </div>
+
+      <div class="top_city">
+      <div class="top_city_title"> DDP </div>
+        <img src="static/main/img/pic2.jpg" >
+      </div>
+
+      <div class="top_city">
+        <img src="static/main/img/pic3.jpg" >
+      </div>
+
+       <div class="top_city">
+       <div class="top_city_title"> 낙산공원 </div>
+        <img src="static/main/img/pic4.jpg" >
+      </div>
+
+      <div class="top_city h2">
+      <div class="top_city_title"> 롯데타워 </div>
+        <img src="static/main/img/pic6.jpg" >
+      </div>
+
+      <div class="top_city">
+        <img src="static/main/img/pic7.jpg" >
+      </div>
+
+      <div class="top_city">
+      <div class="top_city_title"> 서울N타워 </div>
+        <img src="static/main/img/pic8.jpg" >
+      </div>
+
+       <div class="top_city">
+       <div class="top_city_title"> 북촌 </div>
+        <img src="static/main/img/pic9.jpg" >
+      </div>
+
+       <div class="top_city">
+       <div class="top_city_title"> 제주 </div>
+        <img src="static/main/img/pic10.jpg" >
+      </div>
+
+       <div class="top_city">
+
+        <img src="static/main/img/pic11.jpg" >
+      </div>
+
+      </div>
+    </div>
+    <!-- //jsp에서 작성한 section -->
+
+
+
+
+
+        <!-- footer -->
+  <div class="py-5 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>HYtrip Web site</h5>
+          <p class="text-muted">한양여자대학교 스마트IT 학과 하이트립</p>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Boot</h5>
+          <ul class="links list-unstyled">
+            <li> <a href="#" class="text-muted">I like Django</a></li>
+            <li> <a href="#" class="text-muted">So funny</a></li>
+            <li> <a href="#" class="text-muted">Nic</a></li>
+            <li> <a href="#" class="text-muted">Egoiest</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5>Strap</h5>
+          <ul class="links list-unstyled">
+            <li> <a href="#" class="text-muted">Swalla</a></li>
+            <li> <a href="#" class="text-muted">Nustella</a></li>
+            <li> <a href="#" class="text-muted">River and rain</a></li>
+            <li> <a href="#" class="text-muted">Midnight in Paris</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
